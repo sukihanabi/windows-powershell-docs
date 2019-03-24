@@ -1,0 +1,16 @@
+Specifies the type of authentication to use when logging into the target. The acceptable values for this parameter are:
+
+None
+OneWayCHAP
+MutualCHAP
+The default value is None.
+
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
