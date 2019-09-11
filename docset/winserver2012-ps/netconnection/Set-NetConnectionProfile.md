@@ -2,7 +2,7 @@
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 ms.assetid: 30A7D679-081F-467E-AAFE-54F31EABBC4C
 manager: dansimp
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -39,17 +39,15 @@ A connection profile represents a network connection.
 
 ### Example 1: Change the network category of a connection profile
 ```
-This first command gets the connection profile for the network adapter named Ethernet1. The command stores the results in the **$Profile** variable.
-PS C:\>$Profile = Get-NetConnectionProfile -InterfaceAlias Ethernet1
-
-This second command assigns the value of Public to the NetworkCategory property of the connection profile stored in the **$Profile** variable.
-PS C:\>$Profile.NetworkCategory = Public
-
-This third command sets the network category of the connection profile stored in the **$Profile** variable.
+PS C:\>$NetworkProfile = Get-NetConnectionProfile -InterfaceAlias Ethernet1
+PS C:\>$NetworkProfile.NetworkCategory = Public
 PS C:\>Set-NetConnectionProfile -InputObject $Profile
 ```
+This first command gets the connection profile for the network adapter named Ethernet1. The command stores the results in the **$NetworkProfile** variable.
 
-This example changes the network category of a connection profile.
+This second command assigns the value of Public to the NetworkCategory property of the connection profile stored in the **$NetworkProfile** variable.
+
+This third command sets the network category of the connection profile stored in the **$NetworkProfile** variable.
 
 ## PARAMETERS
 
@@ -59,7 +57,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +110,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: IPv4Connectivity[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 Accepted values: Disconnected, NoTraffic, Subnet, LocalNetwork, Internet
 
 Required: False
@@ -134,7 +132,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: IPv6Connectivity[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 Accepted values: Disconnected, NoTraffic, Subnet, LocalNetwork, Internet
 
 Required: False
@@ -151,7 +149,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -166,7 +164,7 @@ Specifies an array of names of network adapters.
 ```yaml
 Type: String[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +179,7 @@ Specifies an array of numerical index values associated with the network adapter
 ```yaml
 Type: UInt32[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +194,7 @@ Specifies an array of names of networks with which the connection is currently e
 ```yaml
 Type: String[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +214,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: NetworkCategory
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private, DomainAuthenticated
 
 Required: False
@@ -233,7 +231,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +248,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,4 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-NetConnectionProfile](./Get-NetConnectionProfile.md)
-
